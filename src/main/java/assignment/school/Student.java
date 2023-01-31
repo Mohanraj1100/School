@@ -7,7 +7,7 @@ public class Student
     char gradelevel;
     float gpa;
     float updatedgpa;
-    String response;
+    int response;
     Scanner sc = new Scanner(System.in);
     Scanner si = new Scanner(System.in);
     Logger log = Logger.getLogger("hi");
@@ -22,10 +22,10 @@ public class Student
     }
 
     void update() {
-        log.info("Do you need to update your GPA\nFor update type Yes");
-        response = si.nextLine();
+        log.info("Do you need to update your GPA\nFor update type 1");
+        response = si.nextInt();
         switch (response) {
-            case "Yes":
+            case 1:
                 log.info("Enter updated GPA");
                 updatedgpa = si.nextFloat();
                 if ((gradelevel == 'A') && (updatedgpa >= 9) && (updatedgpa <= 10)) {
