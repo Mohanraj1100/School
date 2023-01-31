@@ -53,7 +53,7 @@ public class Student
 		}
 		catch(InputMismatchException e)
 		{
-			log.info(String.valueOf(e);
+			log.info(String.valueOf(e));
 			System.exit(0);
 		}				
                 break;
