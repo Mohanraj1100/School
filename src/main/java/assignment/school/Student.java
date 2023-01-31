@@ -29,9 +29,10 @@ public class Student
     }
 
     void update() {
-        log.info("Do you need to update your GPA\nFor update type 1");
-        response = si.nextInt();
-        if(response == 1) {
+        try{
+            log.info("Do you need to update your GPA\nFor update type 1");
+            response = si.nextInt();
+            if(response == 1) {
                 log.info("Enter updated GPA");
                 updatedgpa = si.nextFloat();
                 if ((gradelevel == 'A') && (updatedgpa >= 9) && (updatedgpa <= 10)) {
@@ -50,6 +51,12 @@ public class Student
         }
         else{
             log.info("Invalid");
+        }
+        }
+        catch(InputMismatchException e)
+        {
+            log.info(e);
+            System.exit(0);
         }
     }
 
