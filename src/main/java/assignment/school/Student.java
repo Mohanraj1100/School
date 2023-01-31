@@ -24,8 +24,7 @@ public class Student
     void update() {
         log.info("Do you need to update your GPA\nFor update type 1");
         response = si.nextInt();
-        switch (response) {
-            case 1:
+        if(response == 1) {
                 log.info("Enter updated GPA");
                 updatedgpa = si.nextFloat();
                 if ((gradelevel == 'A') && (updatedgpa >= 9) && (updatedgpa <= 10)) {
@@ -41,7 +40,9 @@ public class Student
                 } else {
                     log.info("Cannot be updated");
                 }		
-                break;
+        }
+        else{
+            log.info("Invalid");
         }
     }
 
