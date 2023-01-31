@@ -34,7 +34,6 @@ public class Student
         response = si.nextLine();
         switch (response) {
             case "Yes":
-		try{	
                 log.info("Enter updated GPA");
                 updatedgpa = si.nextFloat();
                 if ((gradelevel == 'A') && (updatedgpa >= 9) && (updatedgpa <= 10)) {
@@ -49,13 +48,7 @@ public class Student
                     gpa = updatedgpa;
                 } else {
                     log.info("Cannot be updated");
-                }
-		}
-		catch(InputMismatchException e)
-		{
-			log.info(String.valueOf(e));
-			System.exit(0);
-		}				
+                }		
                 break;
         }
     }
