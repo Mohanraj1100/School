@@ -37,15 +37,15 @@ public class Student
 		try{	
                 log.info("Enter updated GPA");
                 updatedgpa = si.nextFloat();
-                if ((GradeLevel == 'A') && (UpdatedGPA >= 9) && (UpdatedGPA <= 10)) {
+                if ((gradelevel == 'A') && (updatedgpa >= 9) && (updatedgpa <= 10)) {
                     gpa = updatedgpa;
-                } else if ((GradeLevel == 'B') && (UpdatedGPA >= 7) && (UpdatedGPA <= 8)) {
+                } else if ((gradelevel == 'B') && (updatedgpa >= 7) && (updatedgpa <= 8)) {
                     gpa = updatedgpa;
-                } else if ((GradeLevel == 'C') && (UpdatedGPA >= 5) && (UpdatedGPA <= 6)) {
+                } else if ((gradelevel == 'C') && (updatedgpa >= 5) && (updatedgpa <= 6)) {
                     gpa = updatedgpa;
-                } else if ((GradeLevel == 'D') && (UpdatedGPA >= 3) && (UpdatedGPA <= 4)) {
+                } else if ((gradelevel == 'D') && (updatedgpa >= 3) && (updatedgpa <= 4)) {
                     gpa = updatedgpa;
-                } else if ((GradeLevel == 'E') && (UpdatedGPA >= 1) && (UpdatedGPA <= 2)) {
+                } else if ((gradelevel == 'E') && (updatedgpa >= 1) && (updatedgpa <= 2)) {
                     gpa = updatedgpa;
                 } else {
                     log.info("Cannot be updated");
