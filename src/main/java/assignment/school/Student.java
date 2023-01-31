@@ -13,12 +13,19 @@ public class Student
     Logger log = Logger.getLogger("hi");
 
     Student() {
-        log.info("Enter the Student Name");
-        studentname = sc.nextLine();
-        log.info("Enter the Grade level");
-        gradelevel = sc.next().charAt(0);
-        log.info("Enter your GPA out of 10");
-        gpa = sc.nextFloat();
+        try{
+            log.info("Enter the Student Name");
+            studentname = sc.nextLine();
+            log.info("Enter the Grade level");
+            gradelevel = sc.next().charAt(0);
+            log.info("Enter your GPA out of 10");
+            gpa = sc.nextFloat();
+        }
+        catch(InputMismatchException e)
+        {
+            log.info(e);
+            System.exit(0);
+        }
     }
 
     void update() {
