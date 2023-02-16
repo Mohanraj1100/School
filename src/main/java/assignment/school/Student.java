@@ -47,7 +47,7 @@ public class Student
     }
 
     void result() {
-        log.fine("{} has a GPA Level of {}",studentname,gpa);
+        log.log(Level.INFO,()-> studentname +" has a GPA Level of "+gpa);
     }
 
     public static void main(String[] args) {
